@@ -1,0 +1,52 @@
+# This sample configuration makes extensive use of the ACLs. It requires
+# HAProxy version 1.3.12 minimum.
+
+global
+	log 127.0.0.1	local0
+	log 127.0.0.1	local1 notice
+	maxconn	   250
+	uid	   99
+	gid	   99
+	daemon
+	#quiet
+
+
+defaults
+	log	global
+	option	httplog
+	option	dontlognull
+	retries	3
+	option  redispatch
+	maxconn	2000
+	contimeout	5000
+	clitimeout	50000
+	srvtimeout	50000
+
+
+
+frontend http-in
+	bind       :80
+	mode       http
+	log        global
+	#option    logasap
+
+	acl host_file   hdr_beg(host) -i file.
+	acl host_wiki   hdr_beg(host) -i wiki.
+	acl host_nexus  hdr_beg(host) -i nexus.
+
+	use_backend	jetty    if host_nexus
+	use_backend	apache   if host_file
+	use_backend	apache   if host_wiki
+	default_backend apache
+
+backend jetty
+	mode	http
+	balance roundrobin
+	cookie SERVERID
+	server www1 127.0.0.1:8081 check inter 30000 rise 2 fall 3 maxconn 10
+
+backend apache
+	mode	http
+	balance roundrobin
+	cookie SERVERID
+	server www1 127.0.0.1:8181 check inter 30000 rise 2 fall 3 maxconn 10
