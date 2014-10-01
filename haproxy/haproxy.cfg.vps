@@ -1,0 +1,56 @@
+# this config needs haproxy-1.1.28 or haproxy-1.2.1
+
+global
+	log 127.0.0.1	local0
+	log 127.0.0.1	local1 notice
+	#log loghost	local0 info
+	maxconn 4096
+	#chroot /usr/share/haproxy
+	user haproxy
+	group haproxy
+	daemon
+	#debug
+	#quiet
+
+defaults
+	log	global
+	option	dontlognull
+	retries	3
+	option redispatch
+	maxconn	2000
+	contimeout	5000
+	clitimeout	50000
+	srvtimeout	50000
+
+listen mysql
+	bind 0.0.0.0:3333
+	balance roundrobin
+	mode   tcp
+	option tcplog
+	server test 127.0.0.1:3306
+
+frontend http-in
+	bind       :80
+	mode       http
+	log        global
+	#option    logasap
+
+	acl host_demo   hdr_beg(host) -i demo.
+	acl host_dl  hdr_beg(host) -i dl.
+
+	use_backend	tomcat  if host_demo
+	use_backend	apache  if host_dl
+	default_backend apache
+    
+backend tomcat
+	mode	http
+	balance roundrobin
+	cookie SERVERID
+	server tomcat 127.0.0.1:8080 check inter 30000 rise 2 fall 3 maxconn 10
+
+backend apache
+	mode	http
+	balance roundrobin
+	cookie SERVERID
+	server tomcat 127.0.0.1:8181 check inter 30000 rise 2 fall 3 maxconn 10
+
