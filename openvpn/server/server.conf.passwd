@@ -1,0 +1,15 @@
+client
+dev tun
+proto udp
+remote 0.0.0.0 9191
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+ca ca.crt
+tls-client
+remote-cert-tls server
+auth-user-pass "/etc/openvpn/passwd.txt"
+comp-lzo
+verb 1
+reneg-sec 0

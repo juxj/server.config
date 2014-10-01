@@ -1,0 +1,75 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 1 (0x1)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=CN, ST=Shanghai, L=Shanghai, O=Tony, OU=Tony, CN=Tony/name=Tony/emailAddress=juxj@hotmail.com
+        Validity
+            Not Before: Sep 28 06:55:19 2014 GMT
+            Not After : Sep 25 06:55:19 2024 GMT
+        Subject: C=CN, ST=Shanghai, L=Shanghai, O=Tony, OU=Tony, CN=openvpn-server/name=Tony/emailAddress=juxj@hotmail.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:d1:df:7f:0d:55:19:44:bc:fe:94:ed:8a:c9:47:
+                    e6:1b:f2:00:99:d6:7c:bf:b3:ac:08:97:91:a8:b2:
+                    e1:98:a6:e7:3c:7a:60:81:f5:b5:aa:18:17:9c:2e:
+                    c6:b8:e6:9d:f0:96:c4:50:ab:0c:72:75:86:78:f2:
+                    50:c7:8f:eb:57:5c:ef:cc:b4:07:d4:2d:9a:eb:0b:
+                    af:25:f9:ac:45:02:63:68:20:fb:ea:e4:15:0f:d6:
+                    29:1c:5b:5a:8d:18:cc:a2:19:40:ea:5d:5c:36:c2:
+                    21:83:5d:d6:57:cf:8a:83:03:b9:13:68:9f:34:49:
+                    51:83:ef:2c:68:07:80:e0:25
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Cert Type: 
+                SSL Server
+            Netscape Comment: 
+                Easy-RSA Generated Server Certificate
+            X509v3 Subject Key Identifier: 
+                CB:C1:54:DF:29:1D:9E:20:56:DF:01:3C:D7:34:4B:16:56:A5:8C:72
+            X509v3 Authority Key Identifier: 
+                keyid:DE:5E:CB:71:72:6B:81:FE:01:71:E1:73:EF:FC:B6:7A:63:00:F6:39
+                DirName:/C=CN/ST=Shanghai/L=Shanghai/O=Tony/OU=Tony/CN=Tony/name=Tony/emailAddress=juxj@hotmail.com
+                serial:A9:A1:C6:B4:B8:85:2D:79
+
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Key Usage: 
+                Digital Signature, Key Encipherment
+    Signature Algorithm: sha1WithRSAEncryption
+         38:ec:84:ca:61:63:11:49:80:f6:93:02:32:b6:7d:a5:4e:90:
+         b4:fe:a0:a7:75:39:fc:de:8f:36:62:55:95:6f:c6:6e:10:17:
+         d1:26:87:f4:bc:46:44:b6:45:da:22:09:df:a8:c5:3c:ab:30:
+         1d:f5:0f:15:8f:8e:08:ec:d0:b1:0c:60:e2:af:55:e2:a8:cc:
+         32:e7:2e:77:3e:2c:da:e7:aa:02:52:b6:f1:bb:04:a7:c6:6b:
+         6e:2f:22:98:87:c4:ea:7e:45:6d:bb:ca:5f:b4:cf:06:aa:37:
+         48:b0:8b:03:40:ea:1f:da:75:a4:74:41:fb:e7:1e:ea:b4:7b:
+         27:f6
+-----BEGIN CERTIFICATE-----
+MIIEBTCCA26gAwIBAgIBATANBgkqhkiG9w0BAQUFADCBkDELMAkGA1UEBhMCQ04x
+ETAPBgNVBAgTCFNoYW5naGFpMREwDwYDVQQHEwhTaGFuZ2hhaTENMAsGA1UEChME
+VG9ueTENMAsGA1UECxMEVG9ueTENMAsGA1UEAxMEVG9ueTENMAsGA1UEKRMEVG9u
+eTEfMB0GCSqGSIb3DQEJARYQanV4akBob3RtYWlsLmNvbTAeFw0xNDA5MjgwNjU1
+MTlaFw0yNDA5MjUwNjU1MTlaMIGaMQswCQYDVQQGEwJDTjERMA8GA1UECBMIU2hh
+bmdoYWkxETAPBgNVBAcTCFNoYW5naGFpMQ0wCwYDVQQKEwRUb255MQ0wCwYDVQQL
+EwRUb255MRcwFQYDVQQDEw5vcGVudnBuLXNlcnZlcjENMAsGA1UEKRMEVG9ueTEf
+MB0GCSqGSIb3DQEJARYQanV4akBob3RtYWlsLmNvbTCBnzANBgkqhkiG9w0BAQEF
+AAOBjQAwgYkCgYEA0d9/DVUZRLz+lO2KyUfmG/IAmdZ8v7OsCJeRqLLhmKbnPHpg
+gfW1qhgXnC7GuOad8JbEUKsMcnWGePJQx4/rV1zvzLQH1C2a6wuvJfmsRQJjaCD7
+6uQVD9YpHFtajRjMohlA6l1cNsIhg13WV8+KgwO5E2ifNElRg+8saAeA4CUCAwEA
+AaOCAWEwggFdMAkGA1UdEwQCMAAwEQYJYIZIAYb4QgEBBAQDAgZAMDQGCWCGSAGG
++EIBDQQnFiVFYXN5LVJTQSBHZW5lcmF0ZWQgU2VydmVyIENlcnRpZmljYXRlMB0G
+A1UdDgQWBBTLwVTfKR2eIFbfATzXNEsWVqWMcjCBxQYDVR0jBIG9MIG6gBTeXstx
+cmuB/gFx4XPv/LZ6YwD2OaGBlqSBkzCBkDELMAkGA1UEBhMCQ04xETAPBgNVBAgT
+CFNoYW5naGFpMREwDwYDVQQHEwhTaGFuZ2hhaTENMAsGA1UEChMEVG9ueTENMAsG
+A1UECxMEVG9ueTENMAsGA1UEAxMEVG9ueTENMAsGA1UEKRMEVG9ueTEfMB0GCSqG
+SIb3DQEJARYQanV4akBob3RtYWlsLmNvbYIJAKmhxrS4hS15MBMGA1UdJQQMMAoG
+CCsGAQUFBwMBMAsGA1UdDwQEAwIFoDANBgkqhkiG9w0BAQUFAAOBgQA47ITKYWMR
+SYD2kwIytn2lTpC0/qCndTn83o82YlWVb8ZuEBfRJof0vEZEtkXaIgnfqMU8qzAd
+9Q8Vj44I7NCxDGDir1XiqMwy5y53Piza56oCUrbxuwSnxmtuLyKYh8TqfkVtu8pf
+tM8GqjdIsIsDQOof2nWkdEH75x7qtHsn9g==
+-----END CERTIFICATE-----
